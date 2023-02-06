@@ -1,43 +1,55 @@
 import UIKit
 
-//Statament control
-1 < 99
-99 <= 1
-99 >= 1
-99 == 99
-1 != 99
+/* -------------------------- LOOPS -------------------------- */
+// For
+let playerGreating = "Hello fellow Hunter!"
+let armorTypes = ["Heavy Plate","Hunters Gear","Mage Robes"]
+let weapons = ["Longsword":150, "Dagger":25, "Mace":75]
 
-//While Loop
-var number = 0
-while number <= 10 {
-    print(number)
-    number+=1
+// String and arrays
+for stringChar in playerGreating{
+    print(stringChar)
 }
 
-var characterStatus = true
-while characterStatus == true {
-    print("character alive")
-    characterStatus = false
+for armor in armorTypes{
+    print(armor)
 }
 
-//For Loop
-var myArray = ["Apple","Orange","Banana"]
-for item in myArray{
-    print(item)
+// Dictionary key-value
+for weaponValues in weapons.values{
+    print(weaponValues)
 }
 
-var myNumbers = [1,2,3,4,65,7,5,71,52,92]
-for item in myNumbers{
-    print(item/9)
+for (weapon,damage) in weapons{
+    print("\(weapon): \(damage)")
 }
 
-for it in 1 ... 10{
-    print(it)
-    print(it*5)
+// Using range
+for indexNumber in 1...10{
+    print(indexNumber)
 }
 
-var fibArray = [1,1,2,3,5,8,13]
-for numb in fibArray{
-    let myNumb = numb*5
-    print(myNumb)
+for armor in armorTypes[0...]{
+    print(armor)
 }
+
+for indexNumber in 1..<10{
+    print(indexNumber)
+}
+
+for armor in armorTypes[..<armorTypes.count]{
+    print(armor)
+}
+
+// While loop
+var playerHealth = 5
+while playerHealth > 0{
+    playerHealth -= 1
+    print("Still kicking!")
+}
+
+// Repeat-while loop
+repeat{
+    playerHealth -= 1
+    print("HP at \(playerHealth)")
+} while playerHealth > 0
